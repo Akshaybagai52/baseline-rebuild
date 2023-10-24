@@ -18,7 +18,7 @@ const Banner = () => {
                 <br /> <span className="marketing">Marketing</span>
               </h1>
               <p className="w-[400px] my-[10px] text-[#C5C6C7]">
-                Web Designidfng Company can help you to attract customers.
+                Web Designidfng fdgCompany can help you to attract customers.
                 Commonly it is the design of the website which can draw in
                 people but it also has the power to drive them away. Having a
                 one among a type web composition is a vital piece of the marking
