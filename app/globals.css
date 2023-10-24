@@ -25,3 +25,48 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+@layer {
+  /* // Nav ///  */
+
+  h1 {
+    @apply font-bold text-[47px];
+    font-family: fantasy;
+  }
+}
+
+.red-gradient {
+  background: rgb(104, 151, 117);
+  background: linear-gradient(
+    0deg,
+    rgba(104, 151, 117, 1) 27%,
+    rgba(199, 73, 58, 1) 100%
+  );
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: rgb(104, 151, 117);
+  background: linear-gradient(
+    0deg,
+    rgba(104, 151, 117, 1) 27%,
+    rgba(199, 73, 58, 1) 100%
+  );
+  transform-origin: bottom right;
+  transition: transform 0.9s ease-out;
+}
