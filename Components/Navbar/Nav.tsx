@@ -9,6 +9,7 @@ const Nav = () => {
   const [NavBackground, setNavBackground] = useState(""); // nav background change
 
   // ______ nav background change event _________//
+
   const listenScrollEvent = () => {
     if (window.scrollY > 10) {
       setNavBackground("black");
@@ -30,6 +31,7 @@ const Nav = () => {
     transition: "background 0.2s ease",
     backdropFilter: `blur(${NavBackground ? "3PX" : ""})`,
   };
+
   //________________end event______________________________//
 
   const handleToggle = () => {
