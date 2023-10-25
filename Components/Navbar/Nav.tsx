@@ -29,7 +29,7 @@ const Nav = () => {
   const navStyle = {
     Background: "transparent",
     transition: "background 0.2s ease",
-    backdropFilter: `blur(${NavBackground ? "3PX" : ""})`,
+    backdropFilter: `blur(${NavBackground ? "8PX" : ""})`,
   };
 
   //________________end event______________________________//
