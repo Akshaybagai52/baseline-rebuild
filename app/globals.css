@@ -16,21 +16,26 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 @layer {
   /* // Nav ///  */
 
   h1 {
     @apply font-bold text-[47px];
     font-family: fantasy;
+  }
+
+  /* // ourservices ? */
+  h2.our_services_headline {
+    @apply text-[#66fcf1] text-[50px] font-extrabold !important;
+  }
+  .service_info {
+    @apply text-[white] w-4/5 text-center m-auto;
+  }
+  .ourservice_main {
+    @apply bg-[#000000] mt-[40px] h-[100vh];
+  }
+  .service_logo {
+    @apply w-[50px] h-[50px] border flex justify-center items-center m-auto rounded-[100%] border-solid !important;
   }
 }
 

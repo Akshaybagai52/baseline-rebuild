@@ -1,16 +1,47 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Getstarted } from "../Buttons/Buttons";
+
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
+
+  const [NavBackground, setNavBackground] = useState(""); // nav background change
+
+  // ______ nav background change event _________//
+  const listenScrollEvent = () => {
+    if (window.scrollY > 10) {
+      setNavBackground("black");
+    } else {
+      setNavBackground("");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
+
+  const navStyle = {
+    Background: "transparent",
+    transition: "background 0.2s ease",
+    backdropFilter: `blur(${NavBackground ? "3PX" : ""})`,
+  };
+  //________________end event______________________________//
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
+
   return (
     <>
-      <nav className="fixed w-full z-20 top-0 left-0">
+      <nav
+        className={"fixed w-full z-20 top-0 left-0 duration-200 "}
+        style={navStyle}
+      >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             href="https://baselineitdevelopment.com/"

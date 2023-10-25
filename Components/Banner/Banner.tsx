@@ -7,10 +7,12 @@ import { Getstarted } from "../Buttons/Buttons";
 const Banner = () => {
   return (
     <div className="banner ">
-      <ParticlesBackground />
+      <div className="particles_banner">
+        <ParticlesBackground />
+      </div>
 
       <div className="container">
-        <div className="banner_content mt-[100px] flex  font-sans items-center">
+        <div className="banner_content mt-[100px] flex  font-sans items-center ">
           <div className="banner_info w-[50%] ">
             <div className="banner_heading w-[50%] m-auto">
               <h1 className="mai_heading leading-[80px] text-[84px] text-[#66FCF1] ">
