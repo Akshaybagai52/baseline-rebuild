@@ -10,14 +10,14 @@ const Nav = ({}) => {
   };
   return (
     <>
-      <nav className="  fixed w-full z-20 top-0 left-0">
+      <nav className="fixed w-full z-20 top-0 left-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             href="https://baselineitdevelopment.com/"
             className="flex items-center"
           >
             <img
-              src="https://i.postimg.cc/kMjdp3Hb/baselinelogo.png"
+              src="https://i.ibb.co/MSzCKQk/baseline-high-resolution-logo-1-transformed-fotor-2023102416319.png"
               className="h-8 mr-3"
               alt="Baseline Logo"
             />
