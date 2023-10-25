@@ -16,15 +16,6 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 @layer {
   /* // Nav ///  */
 
@@ -51,6 +42,7 @@ body {
 .hover-underline-animation {
   display: inline-block;
   position: relative;
+  color:#66fcf1;
 }
 
 .hover-underline-animation::after {
@@ -61,7 +53,6 @@ body {
   height: 2px;
   bottom: 0;
   left: 0;
-  background: rgb(104, 151, 117);
   background: linear-gradient(
     0deg,
     rgba(104, 151, 117, 1) 27%,
