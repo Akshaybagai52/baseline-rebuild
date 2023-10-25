@@ -19,7 +19,17 @@ const config: Config = {
         'mono': ['ui-monospace', 'SFMono-Regular'],
         'display': ['Oswald'],
         'body': ['"Open Sans"'],
-      }
+      },
+      container: {
+        center: true,
+        
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px', // Add your custom 1280px width here
+        },
+      },
     },
   },
   plugins: [],

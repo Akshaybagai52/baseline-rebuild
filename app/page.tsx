@@ -1,12 +1,12 @@
 import Banner from "@/Components/Banner/Banner";
 import Nav from "@/Components/Navbar/Nav";
-// import OurProcess from "@/Components/OurProcess/OurProcess";
+import Ourservice from "@/Components/ourservice/ourservice";
 export default function Home() {
   return (
-    <main>
+    <>
       <Nav />
-      <Banner />
-      {/* <OurProcess /> */}
-    </main>
+      <Banner /> {/* // I am put particles in this banner component  */}
+      <Ourservice />
+    </>
   );
 }
