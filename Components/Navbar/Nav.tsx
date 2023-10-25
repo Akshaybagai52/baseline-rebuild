@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Getstarted } from "../Buttons/Buttons";
-const Nav = () => {
+import NavLink from "./NavLink";
+const Nav = ({}) => {
   const [toggle, setToggle] = useState(false);
-
   const handleToggle = () => {
     setToggle(!toggle);
   };
@@ -49,8 +49,8 @@ const Nav = () => {
                 <path
                   stroke="currentColor"
                   strokeLinecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
@@ -61,31 +61,27 @@ const Nav = () => {
             id="navbar-sticky"
           >
             <ul className="flex flex-col py-0 md:px-4 mt-4 font-medium   md:flex-row md:space-x-8 md:mt-0">
-              <li>
-                <Link
+              <li className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
+                <NavLink
                   href="/"
-                  className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-white md:p-0 md:dark:text"
-                  aria-current="page"
-                >
-                  Home
-                </Link>
+                  activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] border-white block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]"
+                  text="Home"
+                />
               </li>
-              <li>
-                <Link
+              <li className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
+                <NavLink
                   href="/about"
-                  className="hover-underline-animation block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  About
-                </Link>
+                  activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] bold block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]"
+                  text="About"                />
               </li>
-              <li className="group relative">
-                <Link
+              <li className="group relative hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
+                <NavLink
                   href="/services"
-                  className="hover-underline-animation block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Services
-                </Link>
-                <ul className="hidden absolute left-[-30px] rounded text-sm mt-0 space-y-4 bg-black text-[#689775] group-hover:block">
+                  text="Services"
+                  activeClasses="bg-white h-[25px] w-full border-b-[2px] hover-underline-animation block py-2 pl-3 pr-4 text-[#66fcf1] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                />
+                 
+                {/* <ul className="hidden absolute left-[-30px] rounded text-sm mt-0 space-y-4 bg-black text-[#689775] group-hover:block">
                   <li>
                     <a
                       href="/web-devlopment"
@@ -95,54 +91,54 @@ const Nav = () => {
                     </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="/web-designing"
                       className="text-white block px-5 py-0.5 space-y-2 hover:bg-[#689775]"
                     >
                       Web Designing
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="/digital-marketing"
                       className="text-white block px-5 py-0.5 space-y-2 hover:bg-[#689775]"
                     >
                       Digital Marketing
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
+                    <a
                       href="/seo"
                       className="text-white block px-5 py-0.5 space-y-2 hover:bg-[#689775]"
                     >
                       Seo
-                    </Link>
+                    </a>
                   </li>
-                </ul>
+                </ul> */}
               </li>
-              <li>
-                <Link
+              <li className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
+                <NavLink
                   href="contact"
-                  className="hover-underline-animation block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Contact
-                </Link>
+                  activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] block py-2 pl-3 pr-4 text-[#66fcf1] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  text="Contacts"
+               />
+                
               </li>
-              <li>
-                <Link
+              <li className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
+                <NavLink
                   href="/carrier"
-                  className="hover-underline-animation block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Carrier
-                </Link>
+                  text="Carrier"
+                  activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] block py-2 pl-3 pr-4 text-[#66fcf1] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                />
+                
               </li>
-              <li>
-                <Link
+              <li className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
+                <NavLink
                   href="/blog"
-                  className="hover-underline-animation block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Blog
-                </Link>
+                  text="Blogs"
+                  activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] block py-2 pl-3 pr-4 text-[#66fcf1] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                />
+                 
               </li>
             </ul>
           </div>
@@ -152,17 +148,3 @@ const Nav = () => {
   );
 };
 export default Nav;
-
-// import react from "react"
-
-// const Nav=()=>{
-
-//   return(
-//     <>
-//     <div className="header bg-[#19222E]">
-
-//     </div>
-//     </>
-//   )
-// }
-// export default
