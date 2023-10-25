@@ -1,18 +1,43 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ParticlesBackground from "../particles/particlesBackground";
 import { Getstarted } from "../Buttons/Buttons";
-// import digitalimg from "../assets/digital.png";
-// import Image from "next/image";
+
 const Banner = () => {
+  const [screenDimensions, setScreenDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="banner ">
+    <div
+      className="banner"
+      style={{
+        width: screenDimensions?.width,
+        height: screenDimensions?.height,
+      }}
+    >
       <div className="particles_banner">
         <ParticlesBackground />
       </div>
 
       <div className="container">
-        <div className="banner_content mt-[100px] flex  font-sans items-center ">
+        <div className="banner_content mt-[110px] flex  font-sans items-center ">
           <div className="banner_info w-[50%] ">
             <div className="banner_heading w-[50%] m-auto">
               <h1 className="mai_heading leading-[80px] text-[84px] text-[#66FCF1] ">

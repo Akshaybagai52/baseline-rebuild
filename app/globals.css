@@ -71,8 +71,3 @@
   transform-origin: bottom right;
   transition: transform 0.9s ease-out;
 }
-element.style {
-  background: white;
-  color: black;
-  font-weight: 800;
-}
