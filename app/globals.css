@@ -15,15 +15,15 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-@layer {
-  /* // Nav ///  */
+/* @layer {
 
   h1 {
     @apply font-bold text-[47px];
     font-family: fantasy;
   }
-}
+} */
+
+/* Navbar Underline */
 
 .red-gradient {
   background: rgb(104, 151, 117);
@@ -53,11 +53,9 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(104, 151, 117, 1) 27%,
-    rgba(199, 73, 58, 1) 100%
-  );
+  background: white;
   transform-origin: bottom right;
   transition: transform 0.9s ease-out;
 }
+
+
