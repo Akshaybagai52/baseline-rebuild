@@ -1,17 +1,11 @@
 "use client";
-import React from "react";
-// import { Servicvedata } from "../Ts_model/services";
-import Slider from "react-slick";
+import React, { useState } from "react";
+import { DataService } from "../data/data";
+
 import Services from "./services";
 import "./ourservice.css";
+
 const Ourservice = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
   return (
     <>
       <div className="ourservice_main">
@@ -41,17 +35,7 @@ const Ourservice = () => {
           </div>
 
           <div>
-            <Slider {...settings} className=" grid grid-cols-3  my-[20px] ">
-              <Services />
-
-              <Services />
-
-              <Services />
-
-              <Services />
-
-              <Services />
-            </Slider>
+            <Services />
           </div>
         </div>
       </div>
