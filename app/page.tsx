@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <Nav /> 
       <Banner />
-      <OurProcess />
       <Ourservice />
+      <OurProcess />
     </>
   );
 }
