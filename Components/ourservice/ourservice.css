@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  h2.our_services_headline {
+    @apply text-[#66fcf1] text-[50px] font-extrabold !important;
+  }
+  .service_info {
+    @apply text-[white] w-4/5 text-center m-auto;
+  }
+  .ourservice_main {
+    @apply bg-[#000000] mt-[40px] h-[118vh] !important;
+  }
+  .service_logo {
+    @apply w-[50px] h-[50px] border flex justify-center items-center m-auto rounded-[100%] border-solid !important;
+  }
+  .check_icon {
+    @apply inline-flex items-center text-black p-[1px] bg-[#66fcf1]  !important;
+  }
+  .slick-list {
+    @apply h-[109vh] items-center flex flex-col ml-[17px] mr-0 my-0 p-0 !important;
+    /* z-index: 9999; */
+  }
+  .slick-next {
+    @apply right-[-25px] top-[180px] !important;
+  }
+  .slick-prev {
+    @apply left-[-25px] top-[180px] !important;
+  }
+}

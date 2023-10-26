@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  .mai_heading {
+    @apply font-bold text-[47px];
+    font-family: fantasy;
+  }
+}
