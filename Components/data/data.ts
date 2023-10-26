@@ -10,7 +10,7 @@ export const DataService = [
     ],
   },
   {
-    title: "Website Desinging",
+    title: "Website Desingingg",
     service: [
       "Website Desinging and Re-desing",
       "UI/UX, HTML, JavaScript, and other Software  Designing",
