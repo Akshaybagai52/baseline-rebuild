@@ -1,37 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ParticlesBackground from "../particles/particlesBackground";
 import { Getstarted } from "../Buttons/Buttons";
+import "./banner.css";
 
 const Banner = () => {
-  const [screenDimensions, setScreenDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <div
-      className="banner"
-      style={{
-        width: screenDimensions?.width,
-        height: screenDimensions?.height,
-      }}
-    >
+    <div className="banner h-[100vh]">
       <div className="particles_banner">
         <ParticlesBackground />
       </div>
@@ -44,7 +19,7 @@ const Banner = () => {
                 <span className="digital">Digital</span>
                 <br /> <span className="marketing">Marketing</span>
               </h1>
-              <p className="w-[400px] my-[10px] text-[#C5C6C7]">
+              <p className="Marketing_info w-[400px] my-[10px] text-[#C5C6C7]">
                 Web Design Company can help you to attract customers. Commonly
                 it is the design of the website which can draw in people but it
                 also has the power to drive them away. Having a one among a type

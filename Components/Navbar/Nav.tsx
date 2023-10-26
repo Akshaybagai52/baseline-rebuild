@@ -152,7 +152,7 @@ const Nav = () => {
               </li>
               <li className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
                 <NavLink
-                  href="contact"
+                  href="/contact"
                   activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] block py-2 pl-3 pr-4 text-[#66fcf1] rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   text="Contacts"
                 />
