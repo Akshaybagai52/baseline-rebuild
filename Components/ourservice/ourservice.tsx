@@ -2,7 +2,6 @@
 import React from "react";
 // import { Servicvedata } from "../Ts_model/services";
 import Slider from "react-slick";
-
 import Services from "./services";
 import "./ourservice.css";
 const Ourservice = () => {
