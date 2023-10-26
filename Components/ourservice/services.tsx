@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { TfiCheckBox } from "react-icons/tfi";
-import { DataService } from "../data/data";
+import { DataService } from "../data/Data";
 import Slider from "react-slick";
 const Services = () => {
   const settings = {

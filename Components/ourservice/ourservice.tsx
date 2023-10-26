@@ -1,7 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { DataService } from "../data/data";
-
 import Services from "./services";
 import "./ourservice.css";
 
