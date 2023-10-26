@@ -15,15 +15,29 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
 @layer {
+  /* // Nav ///  */
 
   h1 {
     @apply font-bold text-[47px];
     font-family: fantasy;
   }
-}
 
-/* Navbar Underline */
+  /* // ourservices ? */
+  h2.our_services_headline {
+    @apply text-[#66fcf1] text-[50px] font-extrabold !important;
+  }
+  .service_info {
+    @apply text-[white] w-4/5 text-center m-auto;
+  }
+  .ourservice_main {
+    @apply bg-[#000000] mt-[40px] h-[100vh];
+  }
+  .service_logo {
+    @apply w-[50px] h-[50px] border flex justify-center items-center m-auto rounded-[100%] border-solid !important;
+  }
+}
 
 .red-gradient {
   background: rgb(104, 151, 117);
@@ -42,7 +56,7 @@
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color:#66fcf1;
+  color: #66fcf1;
 }
 
 .hover-underline-animation::after {
@@ -57,5 +71,8 @@
   transform-origin: bottom right;
   transition: transform 0.9s ease-out;
 }
-
-
+element.style {
+  background: white;
+  color: black;
+  font-weight: 800;
+}

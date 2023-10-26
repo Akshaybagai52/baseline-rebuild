@@ -1,16 +1,49 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Getstarted } from "../Buttons/Buttons";
 import NavLink from "./NavLink";
-const Nav = ({}) => {
+const Nav = () => {
   const [toggle, setToggle] = useState(false);
+
+  const [NavBackground, setNavBackground] = useState(""); // nav background change
+
+  // ______ nav background change event _________//
+
+  const listenScrollEvent = () => {
+    if (window.scrollY > 10) {
+      setNavBackground("black");
+    } else {
+      setNavBackground("");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return () => {
+      window.removeEventListener("scroll", listenScrollEvent);
+    };
+  }, []);
+
+  const navStyle = {
+    Background: "transparent",
+    transition: "background 0.2s ease",
+    backdropFilter: `blur(${NavBackground ? "8PX" : ""})`,
+  };
+
+  //________________end event______________________________//
+
   const handleToggle = () => {
     setToggle(!toggle);
   };
+
   return (
     <>
-      <nav className="fixed w-full z-20 top-0 left-0">
+      <nav
+        className={"fixed w-full z-20 top-0 left-0 duration-200 "}
+        style={navStyle}
+      >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             href="https://baselineitdevelopment.com/"
@@ -71,7 +104,7 @@ const Nav = ({}) => {
               <li className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
                 <NavLink
                   href="/about"
-                  activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] bold block py-2 pl-3 pr-4 text-white bg-white md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]"
+                  activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] bold block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]"
                   text="About"
                 />
               </li>
@@ -81,7 +114,7 @@ const Nav = ({}) => {
                   text="Services"
                   activeClasses="bg-white h-[25px] w-full border-b-[2px] hover-underline-animation block py-2 pl-3 pr-4 text-[#66fcf1] hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 />
-                 
+
                 {/* <ul className="hidden absolute left-[-30px] rounded text-sm mt-0 space-y-4 bg-black text-[#689775] group-hover:block">
                   <li>
                     <a
@@ -122,8 +155,7 @@ const Nav = ({}) => {
                   href="contact"
                   activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] block py-2 pl-3 pr-4 text-[#66fcf1] hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   text="Contacts"
-               />
-                
+                />
               </li>
               <li className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
                 <NavLink
@@ -131,7 +163,6 @@ const Nav = ({}) => {
                   text="Carrier"
                   activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] block py-2 pl-3 pr-4 text-[#66fcf1] hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 />
-                
               </li>
               <li className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
                 <NavLink
@@ -139,7 +170,6 @@ const Nav = ({}) => {
                   text="Blogs"
                   activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] block py-2 pl-3 pr-4 text-[#66fcf1] hover:bg-gray-100 md:hover:bg-transparent md:hover:text md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 />
-                 
               </li>
             </ul>
           </div>

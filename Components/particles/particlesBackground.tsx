@@ -12,7 +12,7 @@ export default function Cover() {
   //   };
 
   return (
-    <div id="particles-js" className="relative z-[-1]">
+    <div id="particles-js" className=" relative z-[-1]">
       <Particles
         id="tsparticles"
         init={particlesInit}
