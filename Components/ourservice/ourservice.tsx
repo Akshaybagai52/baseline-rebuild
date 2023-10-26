@@ -1,7 +1,17 @@
+"use client";
 import React from "react";
 // import { Servicvedata } from "../Ts_model/services";
+import Slider from "react-slick";
 import Services from "./services";
+import "./ourservice.css";
 const Ourservice = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
   return (
     <>
       <div className="ourservice_main">
@@ -30,10 +40,18 @@ const Ourservice = () => {
             </p>
           </div>
 
-          <div className="card_items grid grid-cols-3 gap-2 my-[20px]">
-            <Services />
-            <Services />
-            <Services />
+          <div>
+            <Slider {...settings} className=" grid grid-cols-3  my-[20px] ">
+              <Services />
+
+              <Services />
+
+              <Services />
+
+              <Services />
+
+              <Services />
+            </Slider>
           </div>
         </div>
       </div>
