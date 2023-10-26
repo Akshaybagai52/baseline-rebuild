@@ -5,9 +5,9 @@ import OurProcess from "@/Components/OurProcess/OurProcess";
 export default function Home() {
   return (
     <>
-      <Nav />
+      <Nav /> 
       <Banner />
-      <OurProcess /> {/* // I am put particles in this banner component  */}
+      <OurProcess />
       <Ourservice />
     </>
   );
