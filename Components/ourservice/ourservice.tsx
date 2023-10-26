@@ -1,8 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Services from "./services";
 import "./ourservice.css";
-
 const Ourservice = () => {
   return (
     <>

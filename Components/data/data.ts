@@ -30,7 +30,6 @@ export const DataService = [
       "Google analytics",
     ],
   },
-
   {
     title: "Big commerce",
     service: [
