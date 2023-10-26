@@ -104,7 +104,7 @@ const Nav = () => {
               <li className="hover-underline-animation block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]">
                 <NavLink
                   href="/about"
-                  activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] bold block py-2 pl-3 pr-4 text-white bg-white rounded md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]"
+                  activeClasses="hover-underline-animation bg-white h-[25px] w-full border-b-[2px] bold block py-2 pl-3 pr-4 text-white bg-white md:bg-transparent md:text-[#66fcf1] md:p-0 md:dark:text-[#66fcf1]"
                   text="About"
                 />
               </li>

@@ -19,11 +19,6 @@
 @layer {
   /* // Nav ///  */
 
-  h1 {
-    @apply font-bold text-[47px];
-    font-family: fantasy;
-  }
-
   /* // ourservices ? */
   h2.our_services_headline {
     @apply text-[#66fcf1] text-[50px] font-extrabold !important;
