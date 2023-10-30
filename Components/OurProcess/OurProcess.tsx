@@ -21,7 +21,12 @@ const OurProcess = () => {
               Our <span className="text-white"> Process</span>
             </h1>
           </motion.div>
-          <div className="container flex w-[800px] mt-[60px]">
+          <div
+            className="container flex w-[800px] mt-[60px]"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             {ProcessItem?.map((card, index) => (
               <div key={index} className="card1">
                 <h3 className="title">{card.title}</h3>
