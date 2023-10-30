@@ -1,67 +1,54 @@
 "use client";
 
 import React from "react";
-import one from "../assets/Process/1.png";
-import two from "../assets/Process/2.png";
-
+import { ProcessItem } from "../ProcessData/Process";
+import { ProcessItem2 } from "../ProcessData/Process";
+import { motion } from "framer-motion";
+import "./Process.css";
 import Image from "next/image";
 
 const OurProcess = () => {
   return (
     <>
-      <div className="bg-black w-[100%] h-[800px] mt-[50px] ">
+      <div className="bg-black w-[100%] h-[1200px] mt-[50px] ">
         <div className="">
-          <h1 className="text-center text-[#66fcf1] text-[50px]">
-            Our <span className="text-white"> Process</span>
-          </h1>
-
-          <div className="mt-16 container mx-auto sm:px-4">
-            <div className="flex flex-wrap">
-              <div className="md:w-2/5 pr-4 pl-4 max-w-sm p-6 bg-[#1F2833] border border-gray-200 rounded-lg shadow dark:bg-gray-800">
-                <div className="flex justify-between">
-                  <a href="#">
-                    <h5 className="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">
-                      IDEA
-                    </h5>
-                  </a>
-                  <Image
-                    className="w-[50px] h-auto text-white dark:text-white8"
-                    src={one}
-                    alt="icon"
-                  />
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h1 className="text-center text-[#66fcf1] text-[50px] font-extrabold">
+              Our <span className="text-white"> Process</span>
+            </h1>
+          </motion.div>
+          <div className="container flex w-[800px] mt-[60px]">
+            {ProcessItem?.map((card, index) => (
+              <div key={index} className="card1">
+                <h3 className="title">{card.title}</h3>
+                <div className="bar">
+                  <div className="emptybar"></div>
+                  <div className="filledbar"></div>
                 </div>
-                <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">
-                  Go to this step by step guideline process on how to certify
-                  for your weekly benefits:
-                </p>
+                <div className="circle">
+                  <h2 className="text-white "> {card.desc} </h2>
+                </div>
               </div>
-              <div className="md:w-1/5 pr-4 pl-4"></div>
-              <div className="md:w-2/5 pr-4 pl-4"></div>
-            </div>
+            ))}
+          </div>
 
-            <div className="flex flex-wrap">
-              <div className="md:w-2/5 pr-4 pl-4"></div>
-              <div className="md:w-1/5 pr-4 pl-4"></div>
-              <div className="md:w-2/5 pr-4 pl-4 max-w-sm p-6 bg-[#1F2833] border border-gray-200 rounded-lg shadow dark:bg-gray-800">
-                <div className="flex justify-between">
-                  <a href="#">
-                    <h5 className="mb-2 text-2xl font-semibold tracking-tight text-white dark:text-white">
-                      RESEARCH
-                    </h5>
-                  </a>
-                  <Image
-                    className="w-[50px] h-auto text-white dark:text-white8"
-                    src={two}
-                    alt="icon"
-                  />
+          <div className="container flex w-[800px] mt-[60px]">
+            {ProcessItem2?.map((card, index) => (
+              <div key={index} className="card1">
+                <h3 className="title">{card.title}</h3>
+                <div className="bar">
+                  <div className="emptybar"></div>
+                  <div className="filledbar"></div>
                 </div>
-                <p className="mb-3 font-normal text-gray-500 dark:text-gray-400">
-                  We conduct extensive research on your project, competitors,
-                  current strategies, and what we can do differently to turn the
-                  tide.
-                </p>
-              </div>{" "}
-            </div>
+                <div className="circle1">
+                  <h2 className="text-white "> {card.desc} </h2>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
